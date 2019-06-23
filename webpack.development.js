@@ -10,7 +10,7 @@ module.exports = merge.smart(common, {
   devtool: "inline-source-map",
   entry: [
     "webpack/hot/poll?1000",
-    path.join(__dirname, "src/index.ts"),
+    path.join(__dirname, "src/index.js"),
   ],
   externals: [
     nodeExternals({
