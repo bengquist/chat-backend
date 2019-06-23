@@ -61,7 +61,9 @@ export default {
         throw new AuthenticationError("Invalid password.");
       }
 
-      return { token: createToken(user, secret, "30m") };
+      const token = await createToken(user, secret, "30m");
+
+      return { token };
     },
 
     deleteUser: combineResolvers(
